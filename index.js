@@ -21,6 +21,7 @@ function agregarTareaAlDOM (texto) {
   parrafoNuevo.className = "tarea"
   parrafoNuevo.textContent = texto
   contenedor.appendChild(parrafoNuevo)
+  parrafoNuevo.onclick = manejarClickAlParrafo
 }
 
 function vaciarTareasDelDOM () {
@@ -33,4 +34,15 @@ event.preventDefault ()
 var tarea = formulario.renglon.value
 agregarUnaTarea(tarea)
 formulario.renglon.value = ""
+}
+
+function manejarClickAlParrafo (event) {
+var tarea = event.target.textContent
+borrarItemDeLaLista(tarea)
+event.target.remove()
+}
+
+function borrarItemDeLaLista (tarea) {
+var indice = tareas.indexOf(tarea)
+tareas.splice(indice, 1)
 }
