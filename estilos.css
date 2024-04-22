@@ -11,6 +11,7 @@ body {
   display: flex;
 justify-content: center;
 align-items: center;
+padding: 15px;
 }
 
 .contenedor {
@@ -33,10 +34,10 @@ min-height: 300px;
 
 .renglon {
   height: 40px;
-  font-size: 18px;
   padding: 10px;
   border-radius: 5px;
   border-style: solid;
+
 }
 
 .boton {
@@ -49,7 +50,8 @@ font-size: 32px;
 color: white;
 }
 form {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 40px;
   gap: 5px;
   margin-bottom: 10px;
 }
